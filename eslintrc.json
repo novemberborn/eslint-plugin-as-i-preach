@@ -8,9 +8,10 @@
       "impliedStrict": true
     }
   },
-  "plugins": ["ava", "babel"],
+  "plugins": ["ava", "babel", "import-order"],
   "rules": {
     "arrow-parens": 0,
-    "babel/arrow-parens": [2, "as-needed"]
+    "babel/arrow-parens": [2, "as-needed"],
+    "import-order/import-order": 2
   }
 }

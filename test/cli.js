@@ -1,8 +1,7 @@
-import test from 'ava'
-
 import { fork } from 'child_process'
 import { resolve } from 'path'
 
+import test from 'ava'
 import getStream from 'get-stream'
 
 test('works with valid files', async t => {
