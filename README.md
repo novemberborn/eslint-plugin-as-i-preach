@@ -24,3 +24,8 @@ Then add it to your `package.json`:
   }
 }
 ```
+
+## Semantic Versioning
+
+Any rule or plugin addition that restricts the rules is considered a breaking
+change. Dependencies aren't pinned however.
