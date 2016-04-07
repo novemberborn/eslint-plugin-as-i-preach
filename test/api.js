@@ -8,7 +8,7 @@ test.cb('works with valid files', t => {
   linter.lintFiles(['fixtures/valid.js'], (err, result) => {
     t.true(err === null)
 
-    t.same(result, {
+    t.deepEqual(result, {
       results: [
         {
           filePath: resolve('fixtures', 'valid.js'),
@@ -29,7 +29,7 @@ test.cb('works with invalid files', t => {
   linter.lintFiles(['fixtures/invalid.js'], (err, result) => {
     t.true(err === null)
 
-    t.same(result, {
+    t.deepEqual(result, {
       results: [
         {
           filePath: resolve('fixtures', 'invalid.js'),
