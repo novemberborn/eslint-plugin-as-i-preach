@@ -12,6 +12,7 @@
   "rules": {
     "babel/arrow-parens": ["error", "as-needed"],
     "babel/generator-star-spacing": ["error", {"before": true, "after": true}],
+    "babel/no-await-in-loop": "error",
     "babel/object-shorthand": ["error", "always"],
     "generator-star-spacing": "off",
     "import/export": "error",
