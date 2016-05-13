@@ -18,7 +18,6 @@
     "import/export": "error",
     "import/extensions": ["error", {"js": "never", "json": "always"}],
     "import/imports-first": "error",
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true}],
     "import/no-mutable-exports": "error",
     "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
     "no-duplicate-imports": "off",
