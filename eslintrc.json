@@ -10,7 +10,7 @@
   },
   "plugins": ["ava", "babel", "import-order"],
   "rules": {
-    "babel/arrow-parens": [2, "as-needed"],
-    "import-order/import-order": 2
+    "babel/arrow-parens": ["error", "as-needed"],
+    "import-order/import-order": "error"
   }
 }
