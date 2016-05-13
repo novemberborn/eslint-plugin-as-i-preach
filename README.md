@@ -1,11 +1,22 @@
 # as-i-preach
 
 Like [`standard`](https://github.com/feross/standard), but using [Babel as the
-parser](https://github.com/babel/babel-eslint) so new syntax can be linted. Also
-includes rules for [AVA
-tests](https://github.com/sindresorhus/eslint-plugin-ava), as well as for
-[enforcing the order of import
-statements](https://github.com/jfmengels/eslint-plugin-import-order).
+parser](https://github.com/babel/babel-eslint) to support experimental language
+features.
+
+Additionally includes:
+
+* Rules for [AVA
+tests](https://github.com/sindresorhus/eslint-plugin-ava)
+* Rules that [enforce the order of import
+statements](https://github.com/jfmengels/eslint-plugin-import-order)
+* Rules for [experimental language
+features](https://github.com/babel/eslint-plugin-babel)
+* Rules for [promises](https://github.com/xjamundx/eslint-plugin-promise)
+
+See
+[`eslintrc.json`](https://github.com/novemberborn/as-i-preach/blob/master/eslintrc.json)
+for details.
 
 It's what [I](https://novemberborn.net/) use.
 
