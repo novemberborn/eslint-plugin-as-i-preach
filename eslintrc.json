@@ -23,6 +23,8 @@
     "import/no-mutable-exports": "error",
     "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
     "no-duplicate-imports": "off",
-    "object-shorthand": "off"
+    "object-shorthand": "off",
+    "promise/always-return": "error",
+    "promise/catch-or-return": "error"
   }
 }
