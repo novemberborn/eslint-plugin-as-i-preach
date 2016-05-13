@@ -8,9 +8,16 @@
       "impliedStrict": true
     }
   },
-  "plugins": ["ava", "babel", "import-order"],
+  "plugins": ["ava", "babel", "import"],
   "rules": {
     "babel/arrow-parens": ["error", "as-needed"],
-    "import-order/import-order": "error"
+    "import/export": "error",
+    "import/extensions": ["error", {"js": "never", "json": "always"}],
+    "import/imports-first": "error",
+    "import/newline-after-import": "error",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true}],
+    "import/no-mutable-exports": "error",
+    "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
+    "no-duplicate-imports": "off"
   }
 }
