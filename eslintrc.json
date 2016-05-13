@@ -11,6 +11,8 @@
   "plugins": ["ava", "babel", "import"],
   "rules": {
     "babel/arrow-parens": ["error", "as-needed"],
+    "babel/generator-star-spacing": ["error", {"before": true, "after": true}],
+    "generator-star-spacing": "off",
     "import/export": "error",
     "import/extensions": ["error", {"js": "never", "json": "always"}],
     "import/imports-first": "error",
