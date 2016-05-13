@@ -12,6 +12,7 @@
   "rules": {
     "babel/arrow-parens": ["error", "as-needed"],
     "babel/generator-star-spacing": ["error", {"before": true, "after": true}],
+    "babel/object-shorthand": ["error", "always"],
     "generator-star-spacing": "off",
     "import/export": "error",
     "import/extensions": ["error", {"js": "never", "json": "always"}],
@@ -20,6 +21,7 @@
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": true}],
     "import/no-mutable-exports": "error",
     "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
-    "no-duplicate-imports": "off"
+    "no-duplicate-imports": "off",
+    "object-shorthand": "off"
   }
 }
