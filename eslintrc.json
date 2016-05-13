@@ -16,7 +16,6 @@
     "babel/object-shorthand": ["error", "always"],
     "generator-star-spacing": "off",
     "import/export": "error",
-    "import/extensions": ["error", {"js": "never", "json": "always"}],
     "import/imports-first": "error",
     "import/no-mutable-exports": "error",
     "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
