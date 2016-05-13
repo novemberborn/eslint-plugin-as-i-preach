@@ -13,14 +13,12 @@
     "babel/arrow-parens": ["error", "as-needed"],
     "babel/generator-star-spacing": ["error", {"before": true, "after": true}],
     "babel/no-await-in-loop": "error",
-    "babel/object-shorthand": ["error", "always"],
     "generator-star-spacing": "off",
     "import/export": "error",
     "import/imports-first": "error",
     "import/no-mutable-exports": "error",
     "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
     "no-duplicate-imports": "off",
-    "object-shorthand": "off",
     "promise/always-return": "error",
     "promise/catch-or-return": "error"
   }
