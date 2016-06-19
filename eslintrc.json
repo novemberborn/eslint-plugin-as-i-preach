@@ -10,7 +10,6 @@
   },
   "plugins": ["ava", "babel", "import"],
   "rules": {
-    "array-bracket-spacing": ["error", "never"],
     "babel/arrow-parens": ["error", "as-needed"],
     "babel/generator-star-spacing": ["error", {"before": true, "after": true}],
     "babel/no-await-in-loop": "error",
@@ -20,7 +19,6 @@
     "import/no-mutable-exports": "error",
     "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
     "no-duplicate-imports": "off",
-    "object-curly-spacing": ["error", "never"],
     "promise/always-return": "error",
     "promise/catch-or-return": "error"
   }
