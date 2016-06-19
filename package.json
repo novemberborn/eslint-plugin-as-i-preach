@@ -40,6 +40,6 @@
   },
   "devDependencies": {
     "ava": "^0.15.0",
-    "get-stream": "^2.2.0"
+    "get-stream": "^2.3.0"
   }
 }
