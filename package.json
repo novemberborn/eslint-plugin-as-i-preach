@@ -1,6 +1,6 @@
 {
   "name": "@novemberborn/as-i-preach",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Like standard, but with support for new syntax and AVA rules, to @novemberborn's taste",
   "main": "index.js",
   "bin": {
