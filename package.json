@@ -13,8 +13,8 @@
     "options.js"
   ],
   "scripts": {
-    "lint": "eslint -c eslintrc.json --ignore-pattern test/fixtures/* .",
-    "test": "ava",
+    "lint": "scripts/eslint.js -c eslintrc.json --ignore-pattern test/fixtures/* .",
+    "test": "scripts/ava.js",
     "posttest": "npm run lint"
   },
   "repository": {
@@ -41,5 +41,8 @@
   "devDependencies": {
     "ava": "^0.15.0",
     "get-stream": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=4"
   }
 }

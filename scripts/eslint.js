@@ -2,8 +2,8 @@
 
 'use strict'
 
-if (require('./is-supported')) {
-  require('standard-engine').cli(require('./options'))
+if (require('../is-supported')) {
+  require('../node_modules/.bin/eslint')
 } else {
   console.warn('Linting requires Node.js >=4')
 }

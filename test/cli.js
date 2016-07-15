@@ -8,39 +8,58 @@ function getCode (ps) {
   return new Promise(resolve => ps.on('close', resolve))
 }
 
-test('works with valid files', async t => {
-  const cli = fork(resolve('../cli.js'), ['valid.js'], {
-    cwd: resolve('fixtures'),
-    silent: true
+if (require('../is-supported')) {
+  test('works with valid files', async t => {
+    const cli = fork(resolve('../cli.js'), ['valid.js'], {
+      cwd: resolve('fixtures'),
+      silent: true
+    })
+
+    const [code, stdout, stderr] = await Promise.all([
+      getCode(cli),
+      getStream(cli.stdout),
+      getStream(cli.stderr)
+    ])
+
+    t.true(code === 0)
+    t.true(stdout === '')
+    t.true(stderr === '')
   })
 
-  const [code, stdout, stderr] = await Promise.all([
-    getCode(cli),
-    getStream(cli.stdout),
-    getStream(cli.stderr)
-  ])
+  test('works with invalid files', async t => {
+    const cli = fork(resolve('../cli.js'), ['invalid.js'], {
+      cwd: resolve('fixtures'),
+      silent: true
+    })
 
-  t.true(code === 0)
-  t.true(stdout === '')
-  t.true(stderr === '')
-})
+    const [code, stdout, stderr] = await Promise.all([
+      getCode(cli),
+      getStream(cli.stdout),
+      getStream(cli.stderr)
+    ])
 
-test('works with invalid files', async t => {
-  const cli = fork(resolve('../cli.js'), ['invalid.js'], {
-    cwd: resolve('fixtures'),
-    silent: true
-  })
-
-  const [code, stdout, stderr] = await Promise.all([
-    getCode(cli),
-    getStream(cli.stdout),
-    getStream(cli.stderr)
-  ])
-
-  t.true(code === 1)
-  const file = resolve('fixtures', 'invalid.js')
-  t.true(stdout === `  ${file}:2:10: Strings must use singlequote.
+    t.true(code === 1)
+    const file = resolve('fixtures', 'invalid.js')
+    t.true(stdout === `  ${file}:2:10: Strings must use singlequote.
   ${file}:3:2: Extra semicolon.
 `)
-  t.true(stderr === 'as-i-preach: as @novemberborn preaches (https://github.com/novemberborn/as-i-preach#readme) \n')
-})
+    t.true(stderr === 'as-i-preach: as @novemberborn preaches (https://github.com/novemberborn/as-i-preach#readme) \n')
+  })
+} else {
+  test('fails with exit code 0 when run on an unsupported platform', async t => {
+    const cli = fork(resolve('../cli.js'), ['valid.js'], {
+      cwd: resolve('fixtures'),
+      silent: true
+    })
+
+    const [code, stdout, stderr] = await Promise.all([
+      getCode(cli),
+      getStream(cli.stdout),
+      getStream(cli.stderr)
+    ])
+
+    t.true(code === 0)
+    t.true(stdout === '')
+    t.true(stderr === 'Linting requires Node.js >=4\n')
+  })
+}
