@@ -15,7 +15,8 @@
   "scripts": {
     "lint": "scripts/eslint.js -c eslintrc.json --ignore-pattern test/fixtures/* .",
     "test": "scripts/ava.js",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "postpublish": "greenkeeper-postpublish"
   },
   "repository": {
     "type": "git",
@@ -40,7 +41,8 @@
   },
   "devDependencies": {
     "ava": "^0.15.0",
-    "get-stream": "^2.3.0"
+    "get-stream": "^2.3.0",
+    "greenkeeper-postpublish": "^1.0.0"
   },
   "engines": {
     "node": ">=4"
