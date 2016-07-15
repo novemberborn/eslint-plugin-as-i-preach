@@ -36,7 +36,7 @@
     "eslint-plugin-import": "1.10.3",
     "eslint-plugin-promise": "2.0.0",
     "eslint-plugin-standard": "2.0.0",
-    "standard-engine": "^4.0.4"
+    "standard-engine": "^4.1.1"
   },
   "devDependencies": {
     "ava": "^0.15.0",
