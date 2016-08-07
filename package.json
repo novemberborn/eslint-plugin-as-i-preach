@@ -41,7 +41,7 @@
     "standard-engine": "^4.1.1"
   },
   "devDependencies": {
-    "ava": "^0.15.0",
+    "ava": "^0.16.0",
     "get-stream": "^2.3.0",
     "greenkeeper-postpublish": "^1.0.0"
   },
