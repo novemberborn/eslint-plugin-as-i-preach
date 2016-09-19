@@ -43,7 +43,9 @@ if (require('../is-supported')) {
     t.true(stdout === `  ${file}:2:10: Strings must use singlequote.
   ${file}:3:2: Extra semicolon.
 `)
-    t.true(stderr === 'as-i-preach: as @novemberborn preaches (https://github.com/novemberborn/as-i-preach#readme) \n')
+    t.true(stderr === `as-i-preach: as @novemberborn preaches (https://github.com/novemberborn/as-i-preach#readme)
+as-i-preach: Run \`as-i-preach --fix\` to automatically fix some problems.
+`)
   })
 } else {
   test('fails with exit code 0 when run on an unsupported platform', async t => {
