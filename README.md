@@ -5,8 +5,8 @@ configuration:
 
 * Rules for [AVA
 tests](https://github.com/sindresorhus/eslint-plugin-ava)
-* Rules that [enforce the order of import
-statements](https://github.com/benmosher/eslint-plugin-import)
+* Rules that [enforce how dependencies are
+imported](https://github.com/benmosher/eslint-plugin-import)
 * Rules for [experimental language
 features](https://github.com/babel/eslint-plugin-babel)
 * Rules for [promises](https://github.com/xjamundx/eslint-plugin-promise)
