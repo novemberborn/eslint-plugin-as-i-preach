@@ -1,8 +1,7 @@
 {
   "extends": ["standard", "plugin:ava/recommended"],
-  "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 7,
+    "ecmaVersion": 2017,
     "sourceType": "module",
     "ecmaFeatures": {
       "impliedStrict": true
