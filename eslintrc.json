@@ -31,6 +31,7 @@
     "import/no-unresolved": ["error", {"commonjs": true}],
     "import/order": ["error", {"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]}],
     "no-duplicate-imports": "off",
+    "no-shadow": ["error", {"builtinGlobals": true, "hoist": "never"}],
     "promise/always-return": "error",
     "promise/catch-or-return": "error",
     "promise/no-return-wrap": "error"
