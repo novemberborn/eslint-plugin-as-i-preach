@@ -10,6 +10,8 @@ imported](https://github.com/benmosher/eslint-plugin-import)
 * Rules for [experimental language
 features](https://github.com/babel/eslint-plugin-babel)
 * Rules for [promises](https://github.com/xjamundx/eslint-plugin-promise)
+* Various [awesome](https://github.com/sindresorhus/eslint-plugin-unicorn)
+ESLint rules
 
 See
 [`eslintrc.json`](https://github.com/novemberborn/as-i-preach/blob/master/eslintrc.json)
