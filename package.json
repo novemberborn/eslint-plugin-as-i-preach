@@ -14,7 +14,8 @@
     "options.js"
   ],
   "scripts": {
-    "lint": "scripts/eslint.js --ignore-pattern test/fixtures/* .",
+    "coverage": "nyc npm test",
+    "lint": "scripts/eslint.js --ignore-pattern test/fixtures/* --ignore-path .gitignore .",
     "test": "scripts/ava.js",
     "posttest": "npm run lint",
     "postpublish": "greenkeeper-postpublish"
@@ -43,12 +44,26 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "get-stream": "^2.3.0",
-    "greenkeeper-postpublish": "^1.0.0"
+    "greenkeeper-postpublish": "^1.0.0",
+    "nyc": "^8.3.2"
   },
   "engines": {
     "node": ">=4"
   },
   "eslintConfig": {
     "extends": "./eslintrc.json"
+  },
+  "nyc": {
+    "cache": true,
+    "exclude": [
+      "node_modules/**/*",
+      "scripts/*",
+      "test/**/*"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ]
   }
 }
