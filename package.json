@@ -14,7 +14,7 @@
     "options.js"
   ],
   "scripts": {
-    "lint": "scripts/eslint.js -c eslintrc.json --ignore-pattern test/fixtures/* .",
+    "lint": "scripts/eslint.js --ignore-pattern test/fixtures/* .",
     "test": "scripts/ava.js",
     "posttest": "npm run lint",
     "postpublish": "greenkeeper-postpublish"
@@ -47,5 +47,8 @@
   },
   "engines": {
     "node": ">=4"
+  },
+  "eslintConfig": {
+    "extends": "./eslintrc.json"
   }
 }
