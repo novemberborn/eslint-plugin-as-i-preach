@@ -1,5 +1,5 @@
 import { fork } from 'child_process'
-import { resolve } from 'path'
+import { resolve as resolvePath } from 'path'
 
 import test from 'ava'
 import getStream from 'get-stream'
@@ -10,8 +10,8 @@ function getCode (ps) {
 
 if (require('../is-supported')) {
   test('works with valid files', async t => {
-    const cli = fork(resolve('../cli.js'), ['valid.js'], {
-      cwd: resolve('fixtures'),
+    const cli = fork(resolvePath('../cli.js'), ['valid.js'], {
+      cwd: resolvePath('fixtures'),
       silent: true
     })
 
@@ -27,8 +27,8 @@ if (require('../is-supported')) {
   })
 
   test('works with invalid files', async t => {
-    const cli = fork(resolve('../cli.js'), ['invalid.js'], {
-      cwd: resolve('fixtures'),
+    const cli = fork(resolvePath('../cli.js'), ['invalid.js'], {
+      cwd: resolvePath('fixtures'),
       silent: true
     })
 
@@ -39,7 +39,7 @@ if (require('../is-supported')) {
     ])
 
     t.true(code === 1)
-    const file = resolve('fixtures', 'invalid.js')
+    const file = resolvePath('fixtures', 'invalid.js')
     t.true(stdout === `  ${file}:2:10: Strings must use singlequote.
   ${file}:3:2: Extra semicolon.
 `)
@@ -49,8 +49,8 @@ as-i-preach: Run \`as-i-preach --fix\` to automatically fix some problems.
   })
 } else {
   test('fails with exit code 0 when run on an unsupported platform', async t => {
-    const cli = fork(resolve('../cli.js'), ['valid.js'], {
-      cwd: resolve('fixtures'),
+    const cli = fork(resolvePath('../cli.js'), ['valid.js'], {
+      cwd: resolvePath('fixtures'),
       silent: true
     })
 
