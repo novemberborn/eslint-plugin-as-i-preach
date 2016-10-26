@@ -30,7 +30,7 @@ module.exports = {
     'import/no-absolute-path': 'error',
     'import/no-duplicates': 'error',
     'import/no-dynamic-require': 'error',
-    'import/no-extraneous-dependencies': 'error',
+    'import/no-extraneous-dependencies': ['error', {}],
     'import/no-mutable-exports': 'error',
     'import/no-unresolved': ['error', {'commonjs': true}],
     'import/order': ['error', {'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],

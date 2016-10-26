@@ -8,7 +8,7 @@ function getCode (ps) {
   return new Promise(resolve => ps.on('close', resolve))
 }
 
-if (require('../is-supported')) {
+if (require('../lib/is-supported')) {
   test('works with valid files', async t => {
     const cli = fork(resolvePath('../cli.js'), ['valid.js'], {
       cwd: resolvePath('fixtures'),
