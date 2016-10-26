@@ -33,7 +33,39 @@ Then add it to your `package.json`:
 }
 ```
 
-## Semantic Versioning
+### Configuration
+
+You can provide configuration in your `package.json` under the `as-i-preach`
+key:
+
+```json
+{
+  "as-i-preach": {
+    "ignore": [
+      "tmp.js"
+    ]
+  }
+}
+```
+
+See [`standard-engine` for
+details](https://github.com/Flet/standard-engine#ignoring-files).
+
+Additionally you can provide the following options:
+
+* `allowDevDependencies`: a string or array of glob patterns for files that are
+allowed to use `devDependencies`.
+
+  Defaults to `["scripts/**/*.js", "test.js", "test/**/*.js"]`
+
+* `fakeDependencies`: a string or array of regular expression patterns for
+dependency sources that are actually fake, and must not be linted.
+
+  For example if you use [`babel-plugin-files`](https://github.com/novemberborn/babel-plugin-files),
+  specify `"^files:"` to avoid linter errors for import statements that are
+  handled by the plugin.
+
+## Semantic versioning
 
 ESLint config and plugin dependencies are pinned. Any rule or plugin addition
 that restricts the rules is considered a breaking change.

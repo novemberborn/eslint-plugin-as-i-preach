@@ -2,7 +2,7 @@
 
 'use strict'
 
-if (!require('../is-supported')) {
+if (!require('../lib/is-supported')) {
   // Drop all arguments, force CLI test to run. Other tests won't work on
   // unsupported platforms.
   process.argv.splice(2, process.argv.length, 'test/cli.js')

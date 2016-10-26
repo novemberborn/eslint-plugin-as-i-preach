@@ -10,12 +10,12 @@
     ".eslintrc.js",
     "cli.js",
     "index.js",
-    "is-supported.js",
-    "options.js"
+    "options.js",
+    "lib"
   ],
   "scripts": {
     "coverage": "nyc npm test",
-    "lint": "scripts/eslint.js --ignore-pattern test/fixtures/* --ignore-path .gitignore .",
+    "lint": "scripts/eslint.js --ignore-pattern 'test/fixtures/**/*.js' --ignore-path .gitignore .",
     "test": "scripts/ava.js",
     "posttest": "npm run lint",
     "postpublish": "greenkeeper-postpublish"
@@ -31,6 +31,7 @@
   },
   "homepage": "https://github.com/novemberborn/as-i-preach#readme",
   "dependencies": {
+    "arrify": "^1.0.1",
     "eslint": "3.8.1",
     "eslint-config-standard": "6.2.1",
     "eslint-plugin-ava": "3.1.1",
@@ -40,7 +41,9 @@
     "eslint-plugin-promise": "3.3.0",
     "eslint-plugin-standard": "2.0.1",
     "eslint-plugin-unicorn": "1.0.0",
-    "standard-engine": "^5.1.1"
+    "find-root": "^1.0.0",
+    "pkg-config": "^1.1.1",
+    "standard-engine": "5.1.1"
   },
   "devDependencies": {
     "ava": "^0.16.0",
