@@ -36,7 +36,6 @@ module.exports = {
     'object-shorthand': 'error',
     'promise/always-return': 'error',
     'promise/catch-or-return': 'error',
-    'promise/no-return-wrap': 'error',
     'unicorn/catch-error-name': 'error',
     'unicorn/explicit-length-check': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
