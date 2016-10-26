@@ -56,7 +56,8 @@ test.cb('works with invalid files', t => {
             }
           ],
           errorCount: 2,
-          warningCount: 0
+          warningCount: 0,
+          source: 'exports.foo = bar => {\n  return "BAR:" + bar.toUpperCase()\n};\n'
         }
       ],
       errorCount: 2,

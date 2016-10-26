@@ -1,10 +1,7 @@
 # as-i-preach
 
-Like [`standard`](https://github.com/feross/standard), but using [Babel as the
-parser](https://github.com/babel/babel-eslint) to support experimental language
-features.
-
-Additionally includes:
+Like [`standard`](https://github.com/feross/standard), with additional
+configuration:
 
 * Rules for [AVA
 tests](https://github.com/sindresorhus/eslint-plugin-ava)
