@@ -12,7 +12,7 @@ module.exports = {
   cmd: 'as-i-preach',
   tagline: 'as @novemberborn preaches',
 
-  eslint: eslint,
+  eslint,
   eslintConfig: {
     configFile: path.join(__dirname, 'eslintrc.json')
   },
