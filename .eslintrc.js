@@ -7,7 +7,11 @@ module.exports = {
       'impliedStrict': true
     }
   },
-  'plugins': ['ava', 'babel', 'import', 'unicorn'],
+  'env': {
+    'node': false,
+    'node-globals/env': true
+  },
+  'plugins': ['ava', 'babel', 'import', 'node-globals', 'unicorn'],
   'rules': {
     'ava/no-async-fn-without-await': 'error',
     'ava/no-duplicate-modifiers': 'error',
