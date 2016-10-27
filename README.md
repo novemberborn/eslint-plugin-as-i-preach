@@ -13,9 +13,7 @@ features](https://github.com/babel/eslint-plugin-babel)
 * Various [awesome](https://github.com/sindresorhus/eslint-plugin-unicorn)
 ESLint rules
 
-See
-[`eslintrc.json`](https://github.com/novemberborn/as-i-preach/blob/master/eslintrc.json)
-for details.
+See [`.eslintrc.js`](.eslintrc.js) for details.
 
 It's what [I](https://novemberborn.net/) use.
 

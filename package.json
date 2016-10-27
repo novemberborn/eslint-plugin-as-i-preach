@@ -7,8 +7,8 @@
     "as-i-preach": "cli.js"
   },
   "files": [
+    ".eslintrc.js",
     "cli.js",
-    "eslintrc.json",
     "index.js",
     "is-supported.js",
     "options.js"
@@ -49,9 +49,6 @@
   },
   "engines": {
     "node": ">=4"
-  },
-  "eslintConfig": {
-    "extends": "./eslintrc.json"
   },
   "nyc": {
     "cache": true,
