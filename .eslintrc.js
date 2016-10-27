@@ -1,0 +1,50 @@
+module.exports = {
+  'extends': ['standard', 'plugin:ava/recommended'],
+  'parserOptions': {
+    'ecmaVersion': 2017,
+    'sourceType': 'module',
+    'ecmaFeatures': {
+      'impliedStrict': true
+    }
+  },
+  'plugins': ['ava', 'babel', 'import', 'unicorn'],
+  'rules': {
+    'ava/no-async-fn-without-await': 'error',
+    'ava/no-duplicate-modifiers': 'error',
+    'babel/arrow-parens': ['error', 'as-needed'],
+    'babel/generator-star-spacing': ['error', {'before': true, 'after': true}],
+    'babel/no-await-in-loop': 'error',
+    'generator-star-spacing': 'off',
+    'import/default': 'error',
+    'import/export': 'error',
+    'import/extensions': ['error', {'js': 'never', 'json': 'always'}],
+    'import/first': 'error',
+    'import/imports-first': 'error',
+    'import/named': 'error',
+    'import/namespace': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-absolute-path': 'error',
+    'import/no-duplicates': 'error',
+    'import/no-dynamic-require': 'error',
+    'import/no-extraneous-dependencies': 'error',
+    'import/no-mutable-exports': 'error',
+    'import/no-unresolved': ['error', {'commonjs': true}],
+    'import/order': ['error', {'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],
+    'no-duplicate-imports': 'off',
+    'no-shadow': ['error', {'builtinGlobals': true, 'hoist': 'never'}],
+    'no-warning-comments': 'warn',
+    'object-shorthand': 'error',
+    'promise/always-return': 'error',
+    'promise/catch-or-return': 'error',
+    'promise/no-return-wrap': 'error',
+    'unicorn/catch-error-name': 'error',
+    'unicorn/explicit-length-check': 'error',
+    'unicorn/no-abusive-eslint-disable': 'error',
+    'unicorn/no-array-instanceof': 'error',
+    'unicorn/no-hex-escape': 'error',
+    'unicorn/no-new-buffer': 'error',
+    'unicorn/no-process-exit': 'error',
+    'unicorn/number-literal-case': 'error',
+    'unicorn/throw-new-error': 'error'
+  }
+}
