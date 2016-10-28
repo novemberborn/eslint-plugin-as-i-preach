@@ -13,9 +13,9 @@ module.exports = {
   },
   'plugins': ['ava', 'babel', 'import', 'node-globals', 'unicorn'],
   'rules': {
+    'arrow-parens': ['error', 'as-needed'],
     'ava/no-async-fn-without-await': 'error',
     'ava/no-duplicate-modifiers': 'error',
-    'babel/arrow-parens': ['error', 'as-needed'],
     'babel/generator-star-spacing': ['error', {'before': true, 'after': true}],
     'babel/no-await-in-loop': 'error',
     'generator-star-spacing': 'off',
