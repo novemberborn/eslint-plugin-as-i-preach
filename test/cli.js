@@ -39,10 +39,8 @@ if (require('../lib/is-supported')) {
     ])
 
     t.true(code === 1)
-    const file = resolvePath('fixtures', 'invalid.js')
-    t.true(stdout === `  ${file}:2:10: Strings must use singlequote.
-  ${file}:3:2: Extra semicolon.
-`)
+    t.regex(stdout, /2:10\s+Strings must use singlequote/)
+    t.regex(stdout, /3:2\s+Extra semicolon/)
     t.true(stderr === `as-i-preach: as @novemberborn preaches (https://github.com/novemberborn/as-i-preach#readme)
 as-i-preach: Run \`as-i-preach --fix\` to automatically fix some problems.
 `)

@@ -4,7 +4,9 @@
 
 // istanbul ignore else
 if (require('./lib/is-supported')) {
-  require('./lib/patched-standard-engine').cli(require('./options'))
+  require('./lib/patch-file-result-output')(
+    require('./lib/patched-standard-engine'), console
+  ).cli(require('./options'))
 } else {
   console.warn('Linting requires Node.js >=4')
 }
