@@ -36,6 +36,7 @@ module.exports = {
     'import/order': ['error', {'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],
     'no-duplicate-imports': 'off',
     'no-shadow': ['error', {'builtinGlobals': true, 'hoist': 'never'}],
+    'no-use-before-define': ['error', 'nofunc'],
     'no-warning-comments': 'warn',
     'object-shorthand': 'error',
     'promise/always-return': 'error',
