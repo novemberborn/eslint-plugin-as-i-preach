@@ -3,6 +3,7 @@
 Like [`standard`](https://github.com/feross/standard), with additional
 configuration:
 
+* Various ESLint rules to restrict allowed syntax
 * Rules for [AVA
 tests](https://github.com/sindresorhus/eslint-plugin-ava)
 * Rules that [enforce how dependencies are
