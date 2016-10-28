@@ -1,7 +1,7 @@
 'use strict'
 
-var eslint = require('eslint')
-var pkg = require('./package.json')
+const eslint = require('eslint')
+const pkg = require('./package.json')
 
 module.exports = {
   version: pkg.version,
