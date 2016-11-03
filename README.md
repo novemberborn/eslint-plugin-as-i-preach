@@ -66,6 +66,9 @@ dependency sources that are actually fake, and must not be linted.
   specify `"^files:"` to avoid linter errors for import statements that are
   handled by the plugin.
 
+* `resolvers`: a valid value for the `eslint-plugin-import`'s [`import/resolver`
+setting](https://github.com/benmosher/eslint-plugin-import#resolvers)
+
 ## Semantic versioning
 
 ESLint config and plugin dependencies are pinned. Any rule or plugin addition

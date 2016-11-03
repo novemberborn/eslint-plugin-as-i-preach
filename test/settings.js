@@ -67,3 +67,15 @@ test('supports fakeDependencies with array value', t => {
     ignore: ['foo.js', 'bar.js']
   }])
 })
+
+test('supports resolvers', t => {
+  const eslintConfig = {}
+  const expected = Symbol()
+  applySettings(eslintConfig, { resolvers: expected }, '/root')
+
+  t.deepEqual(eslintConfig.baseConfig, {
+    settings: {
+      'import/resolver': expected
+    }
+  })
+})
