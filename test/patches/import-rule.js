@@ -9,9 +9,10 @@ const NOT_PATCHED = new Error('Throw when unpatched code is run')
 for (const rule of [extensionsRule, noExtraneousDependenciesRule]) {
   const { create } = rule
   rule.create = function (context) {
-    return Object.assign(create.call(this, context), {
+    const base = create.call(this, context)
+    return Object.assign(base, {
       ImportDeclaration () { throw NOT_PATCHED },
-      CallExpression () { throw NOT_PATCHED }
+      CallExpression: base.CallExpression && (() => { throw NOT_PATCHED })
     })
   }
 }
@@ -38,7 +39,7 @@ function checkPatched (t, rule) {
     t.true(err === NOT_PATCHED)
   }
 
-  {
+  if (instance.CallExpression) {
     t.notThrows(() => instance.CallExpression({}))
     t.notThrows(() => instance.CallExpression(makeStaticRequire('fake')))
     t.notThrows(() => instance.CallExpression(makeStaticRequire('reallyFake')))
