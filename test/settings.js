@@ -1,3 +1,5 @@
+import { join } from 'path'
+
 import test from 'ava'
 
 import applySettings from '../lib/settings'
@@ -68,14 +70,44 @@ test('supports fakeDependencies with array value', t => {
   }])
 })
 
-test('supports resolvers', t => {
+const RESOLVERS_DIR = join(__dirname, 'fixtures', 'resolvers')
+
+test('supports resolvers — resolves string values from the rootDir', t => {
   const eslintConfig = {}
-  const expected = Symbol()
-  applySettings(eslintConfig, { resolvers: expected }, '/root')
+  const settings = { resolvers: 'foo' }
+  applySettings(eslintConfig, settings, RESOLVERS_DIR)
 
   t.deepEqual(eslintConfig.baseConfig, {
     settings: {
-      'import/resolver': expected
+      'import/resolver': join(RESOLVERS_DIR, 'node_modules', 'foo', 'index.js')
     }
   })
+})
+
+test('supports resolvers — resolves object keys from the rootDir', t => {
+  const eslintConfig = {}
+  const settings = {
+    resolvers: {
+      foo: Symbol(),
+      bar: Symbol()
+    }
+  }
+  applySettings(eslintConfig, settings, RESOLVERS_DIR)
+
+  t.deepEqual(eslintConfig.baseConfig, {
+    settings: {
+      'import/resolver': {
+        [join(RESOLVERS_DIR, 'node_modules', 'foo', 'index.js')]: settings.resolvers.foo,
+        [join(RESOLVERS_DIR, 'node_modules', 'bar', 'index.js')]: settings.resolvers.bar
+      }
+    }
+  })
+})
+
+test('supports resolvers — throws if values cannot be resolved', t => {
+  const eslintConfig = {}
+  const settings = { resolvers: 'foo' }
+
+  const err = t.throws(() => applySettings(eslintConfig, settings, '/root'))
+  t.true(err.message === 'Could not resolve \'foo\' import resolver')
 })

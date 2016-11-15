@@ -45,6 +45,7 @@
     "find-root": "^1.0.0",
     "has-flag": "^2.0.0",
     "pkg-config": "^1.1.1",
+    "resolve-from": "^2.0.0",
     "standard-engine": "5.1.1"
   },
   "devDependencies": {
