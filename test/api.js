@@ -1,17 +1,19 @@
-import { resolve } from 'path'
+import { resolve as resolvePath } from 'path'
 
 import test from 'ava'
 
 import linter from '../'
 
+const resolveFixture = name => resolvePath(__dirname, 'fixtures', name)
+
 test.cb('works with valid files', t => {
-  linter.lintFiles(['fixtures/valid.js'], (err, result) => {
+  linter.lintFiles([resolveFixture('valid.js')], (err, result) => {
     t.true(err === null)
 
     t.deepEqual(result, {
       results: [
         {
-          filePath: resolve('fixtures', 'valid.js'),
+          filePath: resolveFixture('valid.js'),
           messages: [],
           errorCount: 0,
           warningCount: 0
@@ -26,13 +28,13 @@ test.cb('works with valid files', t => {
 })
 
 test.cb('works with invalid files', t => {
-  linter.lintFiles(['fixtures/invalid.js'], (err, result) => {
+  linter.lintFiles([resolveFixture('invalid.js')], (err, result) => {
     t.true(err === null)
 
     t.deepEqual(result, {
       results: [
         {
-          filePath: resolve('fixtures', 'invalid.js'),
+          filePath: resolveFixture('invalid.js'),
           messages: [
             {
               ruleId: 'quotes',

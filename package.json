@@ -50,7 +50,7 @@
     "standard-engine": "5.1.1"
   },
   "devDependencies": {
-    "ava": "^0.16.0",
+    "ava": "^0.17.0",
     "coveralls": "^2.11.14",
     "get-stream": "^2.3.0",
     "greenkeeper-postpublish": "^1.0.0",
