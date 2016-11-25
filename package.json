@@ -54,7 +54,7 @@
     "coveralls": "^2.11.14",
     "get-stream": "^3.0.0",
     "greenkeeper-postpublish": "^1.0.0",
-    "nyc": "^8.3.2"
+    "nyc": "^10.0.0"
   },
   "engines": {
     "node": ">=4"
@@ -62,7 +62,6 @@
   "nyc": {
     "cache": true,
     "exclude": [
-      "node_modules/**/*",
       "scripts/*",
       "test/**/*"
     ],
