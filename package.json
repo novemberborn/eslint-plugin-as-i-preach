@@ -15,8 +15,8 @@
   ],
   "scripts": {
     "coverage": "nyc npm test",
-    "lint": "scripts/eslint.js --ignore-pattern 'test/fixtures/**/*.js' --ignore-path .gitignore .",
-    "test": "scripts/ava.js",
+    "lint": "eslint --ignore-pattern 'test/fixtures/**/*.js' --ignore-path .gitignore .",
+    "test": "ava",
     "posttest": "npm run lint",
     "postpublish": "greenkeeper-postpublish"
   },
