@@ -33,6 +33,7 @@ module.exports = {
     'import/no-named-default': 'error',
     'import/no-unresolved': ['error', {'commonjs': true}],
     'import/order': ['error', {'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],
+    'no-case-declarations': 'error',
     'no-duplicate-imports': 'off',
     'no-shadow': ['error', {'builtinGlobals': true, 'hoist': 'never'}],
     'no-use-before-define': ['error', 'nofunc'],
