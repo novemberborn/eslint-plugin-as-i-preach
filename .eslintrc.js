@@ -17,7 +17,6 @@ module.exports = {
     'ava/no-async-fn-without-await': 'error',
     'ava/no-duplicate-modifiers': 'error',
     'babel/generator-star-spacing': ['error', {'before': true, 'after': true}],
-    'babel/no-await-in-loop': 'error',
     'generator-star-spacing': 'off',
     'import/default': 'error',
     'import/export': 'error',
