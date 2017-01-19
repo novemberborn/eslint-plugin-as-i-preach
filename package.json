@@ -36,7 +36,6 @@
     "eslint-config-standard": "6.2.1",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-ava": "4.0.1",
-    "eslint-plugin-babel": "3.3.0",
     "eslint-plugin-import": "2.0.1",
     "eslint-plugin-node-globals": "0.1.0",
     "eslint-plugin-promise": "3.3.0",

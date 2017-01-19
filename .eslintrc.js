@@ -11,7 +11,7 @@ module.exports = {
     'node': false,
     'node-globals/env': true
   },
-  'plugins': ['ava', 'babel', 'import', 'node-globals', 'react', 'unicorn'],
+  'plugins': ['ava', 'import', 'node-globals', 'react', 'unicorn'],
   'rules': {
     'arrow-parens': ['error', 'as-needed'],
     'ava/no-async-fn-without-await': 'error',
