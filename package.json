@@ -40,7 +40,7 @@
     "eslint-plugin-node-globals": "0.1.0",
     "eslint-plugin-promise": "3.4.0",
     "eslint-plugin-react": "6.9.0",
-    "eslint-plugin-standard": "2.0.1",
+    "eslint-plugin-standard": "2.1.0",
     "eslint-plugin-unicorn": "1.0.0",
     "find-root": "^1.0.0",
     "has-flag": "^2.0.0",
