@@ -59,7 +59,12 @@ module.exports = {
     'unicorn/catch-error-name': 'error',
     'unicorn/explicit-length-check': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
+    'unicorn/no-array-instanceof': 'error',
+    'unicorn/no-new-buffer': 'error',
     'unicorn/no-process-exit': 'error',
+    'unicorn/number-literal-case': 'error',
+    'unicorn/prefer-starts-ends-with': 'error',
+    'unicorn/prefer-type-error': 'error',
     'unicorn/throw-new-error': 'error'
   }
 }
