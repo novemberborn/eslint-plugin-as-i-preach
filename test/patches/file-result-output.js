@@ -1,6 +1,6 @@
 import { join } from 'path'
 import test from 'ava'
-import engine from '../../lib/patched-standard-engine'
+import engine from 'standard-engine'
 import patchFileResultOutput from '../../lib/patch-file-result-output'
 import options from '../../options'
 

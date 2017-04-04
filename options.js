@@ -1,6 +1,7 @@
 'use strict'
 
 const eslint = require('eslint')
+const applySettings = require('./lib/settings')
 const pkg = require('./package.json')
 
 module.exports = {
@@ -14,6 +15,11 @@ module.exports = {
   eslint,
   eslintConfig: {
     configFile: require.resolve('./.eslintrc')
+  },
+
+  parseOpts (opts, packageOpts, rootDir) {
+    applySettings(opts.eslintConfig, packageOpts, rootDir)
+    return opts
   },
 
   cwd: ''

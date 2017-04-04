@@ -42,11 +42,9 @@
     "eslint-plugin-react": "6.9.0",
     "eslint-plugin-standard": "2.0.1",
     "eslint-plugin-unicorn": "1.0.0",
-    "find-root": "^1.0.0",
     "has-flag": "^2.0.0",
-    "pkg-config": "^1.1.1",
     "resolve-from": "^2.0.0",
-    "standard-engine": "5.3.0"
+    "standard-engine": "6.0.0"
   },
   "devDependencies": {
     "ava": "^0.18.0",

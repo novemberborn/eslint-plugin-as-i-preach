@@ -1,3 +1,3 @@
 'use strict'
 
-module.exports = require('./lib/patched-standard-engine').linter(require('./options'))
+module.exports = require('standard-engine').linter(require('./options'))
