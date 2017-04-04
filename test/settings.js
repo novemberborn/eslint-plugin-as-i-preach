@@ -88,8 +88,8 @@ test('supports resolvers — resolves object keys from the rootDir', t => {
   const eslintConfig = {}
   const settings = {
     resolvers: {
-      foo: Symbol(),
-      bar: Symbol()
+      foo: Symbol(''),
+      bar: Symbol('')
     }
   }
   applySettings(eslintConfig, settings, RESOLVERS_DIR)
