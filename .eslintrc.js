@@ -1,22 +1,25 @@
 module.exports = {
-  'extends': ['standard', 'plugin:ava/recommended'],
-  'parserOptions': {
-    'ecmaVersion': 2017,
-    'sourceType': 'module',
-    'ecmaFeatures': {
-      'impliedStrict': true
+  extends: ['standard', 'plugin:ava/recommended'],
+  parserOptions: {
+    ecmaVersion: 2017,
+    sourceType: 'module',
+    ecmaFeatures: {
+      impliedStrict: true
     }
   },
-  'env': {
-    'node': false,
+  env: {
+    node: false,
     'node-globals/env': true
   },
-  'plugins': ['ava', 'import', 'node-globals', 'react', 'unicorn'],
-  'rules': {
+  plugins: ['ava', 'import', 'node-globals', 'react', 'unicorn'],
+  rules: {
     'arrow-parens': ['error', 'as-needed'],
     'import/default': 'error',
     'import/export': 'error',
-    'import/extensions': ['error', {'js': 'never', 'json': 'always'}],
+    'import/extensions': ['error', {
+      js: 'never',
+      json: 'always'
+    }],
     'import/first': 'error',
     'import/imports-first': 'error',
     'import/named': 'error',
@@ -28,12 +31,23 @@ module.exports = {
     'import/no-extraneous-dependencies': ['error', {}],
     'import/no-mutable-exports': 'error',
     'import/no-named-default': 'error',
-    'import/no-unresolved': ['error', {'commonjs': true}],
-    'import/order': ['error', {'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']}],
-    'max-len': ['error', {'code': 130, 'tabWidth': 2, 'ignoreComments': true}],
+    'import/no-unresolved': ['error', {
+      commonjs: true
+    }],
+    'import/order': ['error', {
+      groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
+    }],
+    'max-len': ['error', {
+      code: 130,
+      tabWidth: 2,
+      ignoreComments: true
+    }],
     'no-case-declarations': 'error',
     'no-duplicate-imports': 'off',
-    'no-shadow': ['error', {'builtinGlobals': true, 'hoist': 'never'}],
+    'no-shadow': ['error', {
+      builtinGlobals: true,
+      hoist: 'never'
+    }],
     'no-var': 'error',
     'no-warning-comments': 'warn',
     'object-shorthand': 'error',
