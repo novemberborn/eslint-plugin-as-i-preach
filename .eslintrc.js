@@ -14,8 +14,6 @@ module.exports = {
   'plugins': ['ava', 'import', 'node-globals', 'react', 'unicorn'],
   'rules': {
     'arrow-parens': ['error', 'as-needed'],
-    'ava/no-async-fn-without-await': 'error',
-    'ava/no-duplicate-modifiers': 'error',
     'import/default': 'error',
     'import/export': 'error',
     'import/extensions': ['error', {'js': 'never', 'json': 'always'}],
