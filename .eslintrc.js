@@ -55,6 +55,7 @@ module.exports = {
     'react/no-is-mounted': 'error',
     'react/no-unknown-property': 'error',
     'react/require-render-return': 'error',
+    'react/void-dom-elements-no-children': 'error',
     'unicorn/catch-error-name': 'error',
     'unicorn/explicit-length-check': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
