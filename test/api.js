@@ -54,7 +54,7 @@ test.cb('works with invalid files', t => {
               column: 2,
               nodeType: 'ExpressionStatement',
               source: '};',
-              fix: { range: [60, 61], text: '' }
+              fix: { range: [59, 61], text: '}' }
             }
           ],
           errorCount: 2,
