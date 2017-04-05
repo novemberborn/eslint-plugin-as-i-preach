@@ -45,7 +45,7 @@
     "eslint-plugin-unicorn": "2.1.1",
     "has-flag": "^2.0.0",
     "resolve-from": "^2.0.0",
-    "standard-engine": "6.0.0"
+    "standard-engine": "7.0.0"
   },
   "devDependencies": {
     "ava": "^0.18.0",
