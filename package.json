@@ -33,10 +33,11 @@
   "dependencies": {
     "arrify": "^1.0.1",
     "eslint": "3.19.0",
-    "eslint-config-standard": "7.1.0",
+    "eslint-config-standard": "10.0.0",
     "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-ava": "4.2.0",
     "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-node": "4.2.2",
     "eslint-plugin-node-globals": "0.1.0",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-react": "6.10.3",

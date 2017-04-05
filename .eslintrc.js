@@ -15,18 +15,14 @@ module.exports = {
   rules: {
     'arrow-parens': ['error', 'as-needed'],
     'import/default': 'error',
-    'import/export': 'error',
     'import/extensions': ['error', {
       js: 'never',
       json: 'always'
     }],
-    'import/first': 'error',
     'import/imports-first': 'error',
     'import/named': 'error',
     'import/namespace': 'error',
     'import/newline-after-import': 'error',
-    'import/no-absolute-path': 'error',
-    'import/no-duplicates': 'error',
     'import/no-dynamic-require': 'error',
     'import/no-extraneous-dependencies': ['error', {}],
     'import/no-mutable-exports': 'error',
@@ -73,7 +69,6 @@ module.exports = {
     'unicorn/explicit-length-check': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
     'unicorn/no-array-instanceof': 'error',
-    'unicorn/no-new-buffer': 'error',
     'unicorn/no-process-exit': 'error',
     'unicorn/number-literal-case': 'error',
     'unicorn/prefer-starts-ends-with': 'error',
