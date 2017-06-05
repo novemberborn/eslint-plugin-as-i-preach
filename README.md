@@ -3,6 +3,8 @@
 Like [`standard`](https://github.com/feross/standard), with additional
 configuration:
 
+* Uses [`babel-eslint`](https://github.com/babel/babel-eslint) so experimental
+  syntax can be linted
 * Various ESLint rules to restrict allowed syntax
 * Rules for [AVA
 tests](https://github.com/sindresorhus/eslint-plugin-ava)

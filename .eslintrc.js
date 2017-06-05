@@ -1,5 +1,6 @@
 module.exports = {
   extends: ['standard', 'plugin:ava/recommended'],
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module',

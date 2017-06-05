@@ -32,6 +32,7 @@
   "homepage": "https://github.com/novemberborn/as-i-preach#readme",
   "dependencies": {
     "arrify": "^1.0.1",
+    "babel-eslint": "7.2.3",
     "eslint": "3.19.0",
     "eslint-config-standard": "10.2.1",
     "eslint-formatter-pretty": "^1.1.0",
