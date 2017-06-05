@@ -17,8 +17,7 @@
     "coverage": "nyc npm test",
     "lint": "eslint --ignore-pattern 'test/fixtures/**/*.js' --ignore-path .gitignore .",
     "test": "ava",
-    "posttest": "npm run lint",
-    "postpublish": "greenkeeper-postpublish"
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -52,7 +51,6 @@
     "ava": "^0.19.0",
     "codecov": "^2.2.0",
     "get-stream": "^3.0.0",
-    "greenkeeper-postpublish": "^1.0.0",
     "nyc": "^11.0.0"
   },
   "engines": {
