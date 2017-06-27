@@ -68,7 +68,7 @@ module.exports = {
     'react/no-is-mounted': 'error',
     'react/no-string-refs': 'error',
     'react/no-unescaped-entities': 'error',
-    'react/no-unknown-property': 'error',
+    'react/no-unknown-property': ['error', {ignore: ['for']}],
     'react/no-will-update-set-state': 'error',
     'react/require-render-return': 'error',
     'react/void-dom-elements-no-children': 'error',
