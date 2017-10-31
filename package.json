@@ -42,7 +42,7 @@
     "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-react": "7.4.0",
     "eslint-plugin-standard": "3.0.1",
-    "eslint-plugin-unicorn": "2.1.2",
+    "eslint-plugin-unicorn": "github:sindresorhus/eslint-plugin-unicorn#cba8dd9f31f2ff5646376b137a85f95ab2567e98",
     "has-flag": "^2.0.0",
     "resolve-from": "^4.0.0",
     "standard-engine": "7.1.0"
