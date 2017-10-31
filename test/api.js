@@ -16,11 +16,15 @@ test.cb('works with valid files', t => {
           filePath: resolveFixture('valid.js'),
           messages: [],
           errorCount: 0,
-          warningCount: 0
+          fixableErrorCount: 0,
+          warningCount: 0,
+          fixableWarningCount: 0
         }
       ],
       errorCount: 0,
-      warningCount: 0
+      fixableErrorCount: 0,
+      warningCount: 0,
+      fixableWarningCount: 0
     })
 
     t.end()
@@ -41,7 +45,9 @@ test.cb('works with invalid files', t => {
               severity: 2,
               message: 'Strings must use singlequote.',
               line: 2,
+              endLine: 2,
               column: 10,
+              endColumn: 16,
               nodeType: 'Literal',
               source: '  return "BAR:" + bar.toUpperCase()',
               fix: { range: [32, 38], text: '\'BAR:\'' }
@@ -58,12 +64,16 @@ test.cb('works with invalid files', t => {
             }
           ],
           errorCount: 2,
+          fixableErrorCount: 2,
           warningCount: 0,
+          fixableWarningCount: 0,
           source: 'exports.foo = bar => {\n  return "BAR:" + bar.toUpperCase()\n};\n'
         }
       ],
       errorCount: 2,
-      warningCount: 0
+      fixableErrorCount: 2,
+      warningCount: 0,
+      fixableWarningCount: 0
     })
 
     t.end()
