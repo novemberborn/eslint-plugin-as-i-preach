@@ -1,4 +1,4 @@
-import { resolve as resolvePath } from 'path'
+import {resolve as resolvePath} from 'path'
 
 import test from 'ava'
 
@@ -50,7 +50,7 @@ test.cb('works with invalid files', t => {
               endColumn: 16,
               nodeType: 'Literal',
               source: '  return "BAR:" + bar.toUpperCase()',
-              fix: { range: [32, 38], text: '\'BAR:\'' }
+              fix: {range: [32, 38], text: '\'BAR:\''}
             },
             {
               ruleId: 'semi',
@@ -60,7 +60,7 @@ test.cb('works with invalid files', t => {
               column: 2,
               nodeType: 'ExpressionStatement',
               source: '};',
-              fix: { range: [59, 61], text: '}' }
+              fix: {range: [59, 61], text: '}'}
             }
           ],
           errorCount: 2,

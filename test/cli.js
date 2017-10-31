@@ -1,5 +1,5 @@
-import { fork } from 'child_process'
-import { resolve as resolvePath } from 'path'
+import {fork} from 'child_process'
+import {resolve as resolvePath} from 'path'
 
 import test from 'ava'
 import getStream from 'get-stream'

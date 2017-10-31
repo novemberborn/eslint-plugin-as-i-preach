@@ -1,4 +1,4 @@
-import { join } from 'path'
+import {join} from 'path'
 import test from 'ava'
 import engine from 'standard-engine'
 import patchFileResultOutput from '../../lib/patch-file-result-output'
@@ -14,7 +14,7 @@ test.beforeEach(t => {
     stderr: ''
   }
 
-  patchFileResultOutput({ linter: Linter }, {
+  patchFileResultOutput({linter: Linter}, {
     error (output) {
       t.context.stderr += output
     },
@@ -28,7 +28,7 @@ test.beforeEach(t => {
 
 async function checkOutput (t, out, ...args) {
   const other = out === 'stderr' ? 'stdout' : 'stderr'
-  const { results } = await new Promise(resolve => {
+  const {results} = await new Promise(resolve => {
     t.context.linter.lintFiles(...args, (_, result) => resolve(result))
   })
 
@@ -56,7 +56,7 @@ test('patched lintFiles() propagates errors', async t => {
     }
   }
 
-  patchFileResultOutput({ linter: Linter })
+  patchFileResultOutput({linter: Linter})
   const linter = new Linter(Object.assign({}, options))
   const err = await t.throws(new Promise((resolve, reject) => {
     linter.lintFiles([fixture], null, reject)

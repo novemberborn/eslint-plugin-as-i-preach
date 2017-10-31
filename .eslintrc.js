@@ -14,7 +14,9 @@ module.exports = {
   },
   plugins: ['ava', 'import', 'node-globals', 'react', 'unicorn'],
   rules: {
+    'array-bracket-spacing': ['error', 'never'],
     'arrow-parens': ['error', 'as-needed'],
+    'computed-property-spacing': ['error', 'never'],
     'import/default': 'error',
     'import/extensions': ['error', {
       js: 'never',
@@ -47,6 +49,7 @@ module.exports = {
     }],
     'no-var': 'error',
     'no-warning-comments': 'warn',
+    'object-curly-spacing': ['error', 'never'],
     'object-shorthand': 'error',
     'prefer-const': 'error',
     'promise/no-return-in-finally': 'error',
@@ -73,6 +76,9 @@ module.exports = {
     'react/no-will-update-set-state': 'error',
     'react/require-render-return': 'error',
     'react/void-dom-elements-no-children': 'error',
+    'standard/array-bracket-even-spacing': 'off',
+    'standard/computed-property-even-spacing': 'off',
+    'standard/object-curly-even-spacing': 'off',
     'unicorn/catch-error-name': 'error',
     'unicorn/explicit-length-check': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
