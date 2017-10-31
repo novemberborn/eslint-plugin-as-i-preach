@@ -85,13 +85,19 @@ module.exports = {
     'standard/computed-property-even-spacing': 'off',
     'standard/object-curly-even-spacing': 'off',
     'unicorn/catch-error-name': 'error',
+    'unicorn/custom-error-definition': 'error',
+    'unicorn/escape-case': 'error',
     'unicorn/explicit-length-check': 'error',
+    'unicorn/import-index': 'error',
+    'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
     'unicorn/no-array-instanceof': 'error',
-    'unicorn/no-process-exit': 'error',
+    'unicorn/no-fn-reference-in-iterator': 'error',
+    'unicorn/no-hex-escape': 'error',
     'unicorn/number-literal-case': 'error',
     'unicorn/prefer-starts-ends-with': 'error',
     'unicorn/prefer-type-error': 'error',
+    'unicorn/regex-shorthand': 'error',
     'unicorn/throw-new-error': 'error'
   }
 }

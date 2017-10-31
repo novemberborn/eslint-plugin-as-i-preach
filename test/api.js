@@ -2,7 +2,7 @@ import {resolve as resolvePath} from 'path'
 
 import test from 'ava'
 
-import linter from '../'
+import linter from '..'
 
 const resolveFixture = name => resolvePath(__dirname, 'fixtures', name)
 
