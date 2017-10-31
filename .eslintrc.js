@@ -12,7 +12,7 @@ module.exports = {
     node: false,
     'node-globals/env': true
   },
-  plugins: ['ava', 'import', 'node-globals', 'react', 'unicorn'],
+  plugins: ['ava', 'import', 'node-globals', 'react', 'security', 'unicorn'],
   rules: {
     'array-bracket-spacing': ['error', 'never'],
     'arrow-parens': ['error', 'as-needed'],
@@ -81,6 +81,10 @@ module.exports = {
     'react/no-will-update-set-state': 'error',
     'react/require-render-return': 'error',
     'react/void-dom-elements-no-children': 'error',
+    'security/detect-buffer-noassert': 'error',
+    'security/detect-child-process': 'error',
+    'security/detect-eval-with-expression': 'error',
+    'security/detect-unsafe-regex': 'error',
     'standard/array-bracket-even-spacing': 'off',
     'standard/computed-property-even-spacing': 'off',
     'standard/object-curly-even-spacing': 'off',
