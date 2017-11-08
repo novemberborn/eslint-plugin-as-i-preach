@@ -1,3 +1,3 @@
 exports.foo = bar => {
-  return "BAR:" + bar.toUpperCase()
+  return new Buffer("BAR:") + bar.toUpperCase()
 };

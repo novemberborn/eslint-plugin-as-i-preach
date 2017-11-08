@@ -41,36 +41,47 @@ test.cb('works with invalid files', t => {
           filePath: resolveFixture('invalid.js'),
           messages: [
             {
-              ruleId: 'quotes',
-              severity: 2,
-              message: 'Strings must use singlequote.',
-              line: 2,
-              endLine: 2,
               column: 10,
-              endColumn: 16,
-              nodeType: 'Literal',
-              source: '  return "BAR:" + bar.toUpperCase()',
-              fix: {range: [32, 38], text: '\'BAR:\''}
+              endColumn: 28,
+              endLine: 2,
+              line: 2,
+              message: '\'new Buffer()\' was deprecated since v6. Use \'Buffer.alloc()\' or \'Buffer.from()\' (use \'https://www.npmjs.com/package/safe-buffer\' for \'<4.5.0\') instead.', // eslint-disable-line max-len
+              nodeType: 'NewExpression',
+              ruleId: 'node/no-deprecated-api',
+              severity: 2,
+              source: '  return new Buffer("BAR:") + bar.toUpperCase()'
             },
             {
+              column: 21,
+              endColumn: 27,
+              endLine: 2,
+              fix: {range: [43, 49], text: '\'BAR:\''},
+              line: 2,
+              message: 'Strings must use singlequote.',
+              nodeType: 'Literal',
+              ruleId: 'quotes',
+              severity: 2,
+              source: '  return new Buffer("BAR:") + bar.toUpperCase()'
+            },
+            {
+              column: 2,
+              fix: {range: [71, 73], text: '}'},
+              line: 3,
+              message: 'Extra semicolon.',
+              nodeType: 'ExpressionStatement',
               ruleId: 'semi',
               severity: 2,
-              message: 'Extra semicolon.',
-              line: 3,
-              column: 2,
-              nodeType: 'ExpressionStatement',
-              source: '};',
-              fix: {range: [59, 61], text: '}'}
+              source: '};'
             }
           ],
-          errorCount: 2,
+          errorCount: 3,
           fixableErrorCount: 2,
           warningCount: 0,
           fixableWarningCount: 0,
-          source: 'exports.foo = bar => {\n  return "BAR:" + bar.toUpperCase()\n};\n'
+          source: 'exports.foo = bar => {\n  return new Buffer("BAR:") + bar.toUpperCase()\n};\n'
         }
       ],
-      errorCount: 2,
+      errorCount: 3,
       fixableErrorCount: 2,
       warningCount: 0,
       fixableWarningCount: 0

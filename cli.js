@@ -1,7 +1,3 @@
 #!/usr/bin/env node
-
 'use strict'
-
-require('./lib/patch-file-result-output')(
-  require('standard-engine'), console
-).cli(require('./options'))
+require('./lib/patched-standard-engine').cli(require('./options'))

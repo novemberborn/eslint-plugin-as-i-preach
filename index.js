@@ -1,3 +1,3 @@
 'use strict'
-
-module.exports = require('standard-engine').linter(require('./options'))
+const Linter = require('./lib/Linter')
+module.exports = new Linter(require('./options'))

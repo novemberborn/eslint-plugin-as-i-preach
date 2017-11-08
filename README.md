@@ -16,8 +16,10 @@ issues](https://github.com/nodesecurity/eslint-plugin-security)
 * Rules for [JSX / React](https://github.com/yannickcr/eslint-plugin-react)
 * Various [awesome](https://github.com/sindresorhus/eslint-plugin-unicorn)
 ESLint rules
+* [TypeScript](http://typescriptlang.org/) support!
 
-See [`.eslintrc.js`](.eslintrc.js) for details.
+See [`.eslintrc.js`](.eslintrc.js) and
+[`.typescript.eslintrc.js`](.typescript.eslintrc.js) for details.
 
 It's what [I](https://novemberborn.net/) use.
 

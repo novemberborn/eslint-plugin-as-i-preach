@@ -25,9 +25,11 @@ test('overrides import/no-extraneous-dependencies with default devDependencies',
 
   t.deepEqual(eslintConfig.rules['import/no-extraneous-dependencies'], ['error', {
     devDependencies: [
-      '/root/scripts/**/*.js',
+      '/root/scripts/**/{*.js,*.ts}',
       '/root/test.js',
-      '/root/test/**/*.js'
+      '/root/test.ts',
+      '/root/test/**/{*.js,*.ts}',
+      '/root/typings/**/*.d.ts'
     ]
   }])
 })
