@@ -1,6 +1,6 @@
 {
   "name": "@novemberborn/eslint-plugin-as-i-preach",
-  "version": "11.0.0",
+  "version": "12.0.0",
   "description": "ESLint to @novemberborn’s taste",
   "engines": {
     "node": ">=10.18.0 <11 || >=12.14.0 <13 || >=13.5.0"
