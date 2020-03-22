@@ -1,80 +1,89 @@
-# as-i-preach
+# `@novemberborn/eslint-plugin-as-i-preach`
 
-Like [`standard`](https://github.com/feross/standard), with additional
-configuration:
-
-* Uses [`babel-eslint`](https://github.com/babel/babel-eslint) so experimental
-  syntax can be linted
-* Various ESLint rules to restrict allowed syntax
-* Rules for [AVA
-tests](https://github.com/sindresorhus/eslint-plugin-ava)
-* Rules that [enforce how dependencies are
-imported](https://github.com/benmosher/eslint-plugin-import)
-* Rules to avoid [potential security
-issues](https://github.com/nodesecurity/eslint-plugin-security)
-* Rules for [promises](https://github.com/xjamundx/eslint-plugin-promise)
-* Rules for [JSX / React](https://github.com/yannickcr/eslint-plugin-react)
-* Various [awesome](https://github.com/sindresorhus/eslint-plugin-unicorn)
-ESLint rules
-* [TypeScript](http://typescriptlang.org/) support!
-
-See [`.eslintrc.js`](.eslintrc.js) and
-[`.typescript.eslintrc.js`](.typescript.eslintrc.js) for details.
-
-It's what [I](https://novemberborn.net/) use.
+[ESLint](https://eslint.org) to [@novemberborn](https://novemberborn.net/)’s taste.
 
 ## Installation
 
 ```console
-$ npm install --save-dev @novemberborn/as-i-preach
+npm install -D @novemberborn/eslint-plugin-as-i-preach eslint eslint-plugin-{ava,import,node,promise,security,standard,unicorn}
 ```
 
-Then add it to your `package.json`:
+For TypeScript projects, also install:
+
+```console
+npm install -D @typescript-eslint/eslint-plugin
+```
+
+You can ignore peer dependency warnings about this plugin (and the `typescript` dependency) if you don't use TypeScript.
+
+## Usage
+
+Use the `as-i-preach` binary in `package.json` scripts:
 
 ```json
 {
   "scripts": {
-    "lint": "as-i-preach"
+    "test": "as-i-preach"
   }
 }
 ```
 
-### Configuration
+Or run it with `npx`:
 
-You can provide configuration in your `package.json` under the `as-i-preach`
-key:
+```console
+npx as-i-preach
+```
+
+Run with `--fix` to automatically fix violations:
+
+```console
+npx as-i-preach --fix
+```
+
+### Node.js / JavaScript
+
+Create `.eslintrc.js`:
+
+```js
+'use strict'
+
+module.exports = {
+  plugins: ['@novemberborn/as-i-preach'],
+  extends: ['plugin:@novemberborn/as-i-preach/nodejs'],
+}
+```
+
+### Node.js / TypeScript
+
+Create `.eslintrc.js`:
+
+```js
+'use strict'
+
+require('@novemberborn/eslint-plugin-as-i-preach').mergeTypeScriptParserOptions({ tsconfigRootDir: __dirname })
+
+module.exports = {
+  plugins: ['@novemberborn/as-i-preach'],
+  extends: ['plugin:@novemberborn/as-i-preach/nodejs', 'plugin:@novemberborn/as-i-preach/typescript'],
+}
+```
+
+All `*.ts` and `*.d.ts` files must be included by your TypeScript config. If you want to exclude certain files from compilation you can create a `tsconfig.eslint.json` file instead. It'll be picked up automatically.
+
+For instance, given a `tsconfig.json`:
 
 ```json
 {
-  "as-i-preach": {
-    "ignore": [
-      "tmp.js"
-    ]
-  }
+  "include": ["src/**/*"],
+  "exclude": ["src/test/typescript/*"]
 }
 ```
 
-See [`standard-engine` for
-details](https://github.com/Flet/standard-engine#ignoring-files).
+You could write a `tsconfig.eslint.json`:
 
-Additionally you can provide the following options:
-
-* `allowDevDependencies`: a string or array of glob patterns for files that are
-allowed to use `devDependencies`.
-
-  Defaults to `["scripts/**/*.js", "test.js", "test/**/*.js"]`
-
-* `fakeDependencies`: a string or array of regular expression patterns for
-dependency sources that are actually fake, and must not be linted.
-
-  For example if you use [`babel-plugin-files`](https://github.com/novemberborn/babel-plugin-files),
-  specify `"^files:"` to avoid linter errors for import statements that are
-  handled by the plugin.
-
-* `resolvers`: a valid value for the `eslint-plugin-import`'s [`import/resolver`
-setting](https://github.com/benmosher/eslint-plugin-import#resolvers)
-
-## Semantic versioning
-
-ESLint config and plugin dependencies are pinned. Any rule or plugin addition
-that restricts the rules is considered a breaking change.
+```json
+{
+  "extends": "./tsconfig.json",
+  "exclude": []
+}
+```

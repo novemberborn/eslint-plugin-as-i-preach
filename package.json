@@ -1,78 +1,67 @@
 {
-  "name": "@novemberborn/as-i-preach",
+  "name": "@novemberborn/eslint-plugin-as-i-preach",
   "version": "11.0.0",
-  "description": "Like standard, but with support for new syntax and AVA rules, to @novemberborn's taste",
+  "description": "ESLint to @novemberborn’s taste",
+  "engines": {
+    "node": ">=10.18.0 <11 || >=12.14.0 <13 || >=13.5.0"
+  },
   "main": "index.js",
   "bin": {
-    "as-i-preach": "cli.js"
+    "as-i-preach": "./cli.js"
   },
   "files": [
-    ".eslintrc.js",
-    ".typescript.eslintrc.js",
-    "cli.js",
     "index.js",
-    "options.js",
-    "lib"
+    "cli.js"
   ],
   "scripts": {
-    "coverage": "nyc npm test",
-    "lint": "eslint --ignore-pattern 'test/fixtures/**/*.js' --ignore-path .gitignore .",
-    "test": "ava",
-    "posttest": "npm run lint"
+    "test": "eslint . && eslint -c fixtures/typescript/.eslintrc.js --ext js,ts fixtures/typescript"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/novemberborn/as-i-preach.git"
   },
   "author": "Mark Wubben (https://novemberborn.net/)",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/novemberborn/as-i-preach/issues"
   },
   "homepage": "https://github.com/novemberborn/as-i-preach#readme",
-  "dependencies": {
-    "arrify": "^1.0.1",
-    "babel-eslint": "8.0.2",
-    "deglob": "^2.1.0",
-    "eslint": "4.11.0",
-    "eslint-config-standard": "10.2.1",
-    "eslint-formatter-pretty": "^1.1.0",
-    "eslint-import-resolver-typescript": "1.0.2",
-    "eslint-plugin-ava": "4.2.2",
-    "eslint-plugin-import": "2.8.0",
-    "eslint-plugin-node": "5.2.1",
-    "eslint-plugin-node-globals": "0.1.0",
-    "eslint-plugin-promise": "3.6.0",
-    "eslint-plugin-react": "7.4.0",
-    "eslint-plugin-security": "1.4.0",
-    "eslint-plugin-standard": "3.0.1",
-    "eslint-plugin-typescript": "0.8.0",
-    "eslint-plugin-unicorn": "3.0.0",
-    "has-flag": "^2.0.0",
-    "resolve-from": "^4.0.0",
-    "standard-engine": "7.1.0",
-    "typescript-eslint-parser": "9.0.0"
-  },
   "devDependencies": {
-    "ava": "^1.1.0",
-    "codecov": "^3.1.0",
-    "get-stream": "^4.1.0",
-    "nyc": "^13.1.0",
-    "typescript": "^2.6.1"
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-ava": "^10.2.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^17.2.0",
+    "typescript": "^3.8.3"
   },
-  "engines": {
-    "node": ">=4"
+  "dependencies": {
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-formatter-pretty": "^3.0.1",
+    "execa": "^4.0.0",
+    "pkg-dir": "^4.2.0"
   },
-  "nyc": {
-    "cache": true,
-    "exclude": [
-      "scripts/*",
-      "test/**/*"
-    ],
-    "reporter": [
-      "html",
-      "lcov",
-      "text"
-    ]
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-ava": "^10.2.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^17.2.0",
+    "typescript": "^3.8.3"
+  },
+  "peerDependenciesMeta": {
+    "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
   }
 }
