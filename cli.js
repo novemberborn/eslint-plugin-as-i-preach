@@ -12,7 +12,6 @@ execa('eslint', [
   '--cache',
   '--cache-location', './node_modules/.cache/eslint/',
   '--format', require.resolve('eslint-formatter-pretty'),
-  '--ext', '.js,.ts',
   ...fixArgs,
   '.',
 ], {

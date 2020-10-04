@@ -28,7 +28,6 @@ const mergeTypeScriptParserOptions = ({ tsconfigRootDir }) => {
 const noShadowOptions = { builtinGlobals: true, hoist: 'never' }
 
 const nodejs = {
-  ignorePatterns: ['!.eslintrc.js', '!.eslintrc.cjs'],
   reportUnusedDisableDirectives: true,
   parserOptions: {
     ecmaVersion,
@@ -176,9 +175,7 @@ const typescript = {
         'unicorn/prefer-starts-ends-with': 'off',
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/await-thenable': 'error',
-        '@typescript-eslint/ban-ts-ignore': 'error',
-        '@typescript-eslint/camelcase': 'error',
-        '@typescript-eslint/class-name-casing': 'error',
+        '@typescript-eslint/ban-ts-comment': 'error',
         '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
         '@typescript-eslint/consistent-type-assertions': ['error', {
           assertionStyle: 'as',
@@ -188,7 +185,6 @@ const typescript = {
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
         '@typescript-eslint/func-call-spacing': 'error',
         '@typescript-eslint/indent': ['error', 2],
-        '@typescript-eslint/interface-name-prefix': 'error',
         '@typescript-eslint/member-delimiter-style': ['error', {
           multiline: {
             delimiter: 'none',
@@ -207,6 +203,7 @@ const typescript = {
           },
         }],
         '@typescript-eslint/member-ordering': 'error',
+        '@typescript-eslint/naming-convention': 'error',
         '@typescript-eslint/no-array-constructor': 'error',
         '@typescript-eslint/no-base-to-string': 'error',
         '@typescript-eslint/no-dupe-class-members': 'error',
@@ -251,7 +248,7 @@ const typescript = {
         '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowBoolean: true }],
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
         '@typescript-eslint/space-before-function-paren': 'error',
-        '@typescript-eslint/strict-boolean-expressions': ['error', { allowSafe: true }],
+        '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/triple-slash-reference': ['error', { path: 'never', types: 'never', lib: 'never' }],
         '@typescript-eslint/type-annotation-spacing': 'error',
         '@typescript-eslint/unified-signatures': 'error',
