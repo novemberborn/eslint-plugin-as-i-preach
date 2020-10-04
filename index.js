@@ -3,7 +3,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const ecmaVersion = 2020
+const ecmaVersion = 2021
 
 let typescriptParserOptions = {
   ecmaVersion,
