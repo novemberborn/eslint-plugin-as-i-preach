@@ -65,6 +65,8 @@ const nodejs = {
     'ava/prefer-t-regex': 'error',
     'ava/test-ended': 'error',
     'ava/use-t': 'error',
+    'ava/use-t-well': 'error',
+    'ava/use-t-throws-async-well': 'error',
     'ava/use-true-false': 'error',
     'default-param-last': 'error',
     'grouped-accessor-pairs': 'error',
